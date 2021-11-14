@@ -18,36 +18,38 @@ function trilaterate() {
 
     // *** CALCULATE DISTANCE FROM RSSI ***
     // Formula: Distance = 10 ^ ((Measured Power – RSSI)/(10 * N))
+    // NOTE: change RSSI values when using the equation.
 
-    var measuredPow = -69;
+    // Constants from BLE beacons
+    var measuredPow = -3;
     var n = 2;
     
     // Calculate first RSSI value distance
     var rssiVal1 = -60;
-    let rssiDist1 = (Math.pow(10, ((measuredPow - rssiVal1) / (10 * n)))).toFixed(2);
+    let distA = (Math.pow(10, ((measuredPow - rssiVal1) / (10 * n)))).toFixed(2);
     console.log(rssiDist1);
 
     // Calculate second RSSI value distance
     var rssiVal2 = -69;
-    let rssiDist2 = (Math.pow(10, ((measuredPow - rssiVal2) / (10 * n)))).toFixed(2);
+    let distB = (Math.pow(10, ((measuredPow - rssiVal2) / (10 * n)))).toFixed(2);
     console.log(rssiDist2);
 
     // Calculate third RSSI value distance
     var rssiVal3 = -80;
-    let rssiDist3 = (Math.pow(10, ((measuredPow - rssiVal3) / (10 * n)))).toFixed(2);
+    let distC = (Math.pow(10, ((measuredPow - rssiVal3) / (10 * n)))).toFixed(2);
     console.log(rssiDist3);
 
     // ************************************
 
 
-    // *** DECLARE INITIAL VALUES ***
-    // Note: change these when using the equation.
+    // *** DECLARE GPS COORDINATES ***
+    // Note: change GPS coordinates when using the equation.
 
     // Declare distances (radius) to be used
     // Walking Shape App terms: RSSI values
-    var distA = 50.00;
+    /* var distA = 50.00;
     var distB = 36.06;
-    var distC = 60.83;
+    var distC = 60.83; */
 
     // Declare GPS coordinates (x and y coords) to be used
     // Walking Shape App terms: known beacon GPS coordinates

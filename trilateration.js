@@ -27,17 +27,14 @@ function trilaterate() {
     // Calculate first RSSI value distance
     var rssiVal1 = -60;
     let distA = (Math.pow(10, ((measuredPow - rssiVal1) / (10 * n)))).toFixed(2);
-    console.log(rssiDist1);
 
     // Calculate second RSSI value distance
     var rssiVal2 = -69;
     let distB = (Math.pow(10, ((measuredPow - rssiVal2) / (10 * n)))).toFixed(2);
-    console.log(rssiDist2);
 
     // Calculate third RSSI value distance
     var rssiVal3 = -80;
     let distC = (Math.pow(10, ((measuredPow - rssiVal3) / (10 * n)))).toFixed(2);
-    console.log(rssiDist3);
 
     // ************************************
 
